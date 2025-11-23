@@ -1,0 +1,1 @@
+export async function GET(){ return Response.json({ message: 'Lambda API is live' }); }
