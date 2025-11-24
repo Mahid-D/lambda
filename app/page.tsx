@@ -25,7 +25,7 @@ export default function HomePage(){
 
             <div className="mt-8 flex gap-3">
               <Link href="/contact" className="btn-primary">Get a free quote</Link>
-              <Link href="/portfolio" className="btn-secondary">See our work</Link>
+              <Link href="/coming-soon.html" className="btn-primary">See Our Works</Link>
             </div>
           </div>
 
