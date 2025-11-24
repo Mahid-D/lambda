@@ -1,14 +1,14 @@
 import Link from "next/link";
-export function FeatureCards({ items }:{ items: {title:string; desc:string; href:string}[] }){
+export function FeatureCards({ items = [] }) {
   return (
-    <div className="grid md:grid-cols-3 gap-6">
-      {items.map((i, idx) => (
-        <article key={idx} className="card card-hover p-6 appear">
-          <h3 className="mt-1 text-lg font-semibold">{i.title}</h3>
-          <p className="text-sm mt-2 text-gray-600 dark:text-gray-300">{i.desc}</p>
-          <Link className="link mt-4 inline-flex" href={i.href}>Learn more</Link>
-        </article>
+    <ul className="grid sm:grid-cols-3 gap-6" role="list">
+      {items.map(item => (
+        <li key={item.href} role="listitem" className="card p-5">
+          <h3 className="font-semibold">{item.title}</h3>
+          <p className="text-sm mt-2 text-gray-600 dark:text-gray-300">{item.desc}</p>
+          <a href={item.href} className="mt-4 inline-block text-sm text-blue-600">Learn more →</a>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }

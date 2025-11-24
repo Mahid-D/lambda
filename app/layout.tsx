@@ -17,6 +17,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }){
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${sans.variable} ${display.variable} font-sans`}>
+        {/* paste at top of <body> in app/layout.js or pages/_app.js */}
+<a href="#main-content" className="skip-link sr-only">Skip to content</a>
+
         <Navbar />
         <main>{children}</main>
         <Footer />
